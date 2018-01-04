@@ -1,0 +1,44 @@
+---
+layout: default_bootstrap
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="panel panel-default">
+  <div class="panel-heading text-center">
+  <header class="post-header">
+    <h4 itemprop="name headline">{{ page.title | escape }}</h4>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {{ page.date | date: date_format }}
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}</p>
+  </header>
+</div>
+
+  <div class="post-content" itemprop="articleBody">
+
+{% if page.image.feature and page.image.feature != "" %}
+  <img src="{{ page.image.feature }}" alt="{{ post.title }}" class="img-fluid">  
+  {% endif %}
+{% if page.youtubeId and page.youtubeId != "" %}
+  {% include youtubeplayer.html id=page.youtubeId %}
+  {% endif %}
+{% if page.fbvideoId and page.fbvideoId != "" %}
+  {% include fbvideoplayer.html id=page.fbvideoId %}
+  {% endif %}
+<div class="panel-body text-justify">
+    {{ content }}
+{% include  fb-like.html %}
+
+<a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook"><img src="/image/facebook.png" alt="facebook"></a>
+<a href="whatsapp://send?text={{ site.url}}{{ page.url }}" data-action="share/whatsapp/share"><img src="/image/whatsapp.png" alt="whatsapp"></a>
+  </div></div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+{% include  fb-comment.html %}
+</div>
+</article>
