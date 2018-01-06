@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default_bootstrap
 permalink: /icu/
 ---
 <button class="btn btn-danger center-block" type="button">ICU trolls</button>
