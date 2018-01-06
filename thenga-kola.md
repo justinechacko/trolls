@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default_bootstrap
 permalink: /thenga-kola/
 ---
 <button class="btn btn-danger center-block" type="button">Thenga Kola Trolls</button>
