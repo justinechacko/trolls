@@ -2,7 +2,7 @@
 layout: page
 permalink: /thenga-kola/
 ---
-<button class="btn btn-danger center-block" type="button">Troll malayalam trolls</button>
+<button class="btn btn-danger center-block" type="button">Thenga Kola Trolls</button>
 <br>
 <br>
 <br>
