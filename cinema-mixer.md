@@ -3,7 +3,7 @@ layout: page
 permalink: /cinema-mixer/
 ---
 
-<button class="btn btn-danger center-block" type="button">Troll malayalam trolls</button>
+<button class="btn btn-danger center-block" type="button">Cinema Mixer Trolls</button>
 <br>
 <br>
 <br>
