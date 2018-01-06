@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /thenga-kola/
+permalink: /cinema-mixer/
 ---
 
 <button class="btn btn-danger center-block" type="button">Troll malayalam trolls</button>
