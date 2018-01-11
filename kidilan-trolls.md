@@ -7,4 +7,4 @@ permalink: /kidilan-trolls/
 <br>
 <br>
 <br>
-<iframe src="https://drive.google.com/embeddedfolderview?id=1skrbQfWPUugsgsirC4k5ypzdU_MJcwL5#grid" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="https://drive.google.com/embeddedfolderview?id=1skrbQfWPUugsgsirC4k5ypzdU_MJcwL5#grid" width="100%" height="1500" frameborder="0"></iframe>
