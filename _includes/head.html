@@ -9,26 +9,7 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  
-  {% if jekyll.environment == 'production' and site.google_analytics %}
-  {% include google-analytics.html %}
-  {% endif %}
-
-<!--
-<meta property="fb:pages" content="1417649284989267" />
--->
-<meta property="fb:app_id" content="254948251688891" />
-  <!--
-<meta property="og:url" content="https://www.youtube.com/watch?v={{ page.youtubeId }}" />
-  -->
-<meta property="og:type" content="video.other" />
-<meta property="og:title" content="{{ page.title }}" />
-<meta property="og:description" content="{{ page.content | markdownify | strip_html | strip_newlines | truncate: 300 }}" />
  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
- <link href="/js/clusterize.css" rel="stylesheet">
-<script src="/js/clusterize.min.js"></script>
-
 <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 <script src="/js/footer.js"></script>
-<script src="/js/cl.js"></script>
-<script src="http://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
+<script src="/js/lazysizes.min.js" async=""></script>

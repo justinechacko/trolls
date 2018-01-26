@@ -20,7 +20,9 @@ layout: default_bootstrap
           <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </span>&bull;
  <span  class="post-meta">{{ post.date | date: date_format }}</span>
-<hr>
+{{ post.excerpt }}
+
+<a href="{{ site.baseurl }}{{ post.url }}"><button class="btn btn-danger center-block" type="button">Read more</button></a>
       </li>
     {% endfor %}
   </ul>

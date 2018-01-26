@@ -28,6 +28,8 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
 
+excerpt_separator: <!--more-->
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -35,5 +37,5 @@ sass:
   load_paths:
     - _sass                             # original sass
     - bower_components/bootstrap-sass/assets/stylesheets  # bootstrap
-paginate: 10
+paginate: 2
 paginate_path: "page:num"
