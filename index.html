@@ -14,20 +14,14 @@ layout: default
         
           
 
-              <div class="card shadow-nohover">
-  	             
-                 {% if page.image.feature and page.image.feature != "" %}
-                 <img src="{{ page.image.feature }}" alt="{{ post.title }}" class="card-img-top">
-                 {% endif %}
-                 <div class="card-body">
+              <h5 class="card-title"><a class="text-black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
 
-                   <h5 class="card-title"><a class="text-black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
-<div class="byline"><span><i class="fa fa-calendar"></i> {{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span><span><i class="fas fa-pencil-alt" aria-hidden="true"></i> {{post.author}}</span></div>
+                 
+
+                   
                    {{ post.excerpt }}
                    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-danger text-white" role="button">Read More</a>
-                 </div>
                  
-               </div>
 
           
           
