@@ -1,44 +1,36 @@
 ---
-layout: default_bootstrap
+layout: default
 ---
+<div class="container">
+
+  
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-<div class="panel panel-default">
-  <div class="panel-heading text-center">
+ <div class="card shadow-nohover">
   <header class="post-header">
-    <h4 itemprop="name headline">{{ page.title | escape }}</h4>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
-  </header>
-</div>
-
-  <div class="post-content" itemprop="articleBody">
-
-{% if page.image.feature and page.image.feature != "" %}
-  <img src="{{ page.image.feature }}" alt="{{ post.title }}" class="img-fluid">  
-  {% endif %}
 {% if page.youtubeId and page.youtubeId != "" %}
-  {% include youtubeplayer.html id=page.youtubeId %}
-  {% endif %}
-{% if page.fbvideoId and page.fbvideoId != "" %}
-  {% include fbvideoplayer.html id=page.fbvideoId %}
-  {% endif %}
-<div class="panel-body text-justify">
-    {{ content }}
-{% include  fb-like.html %}
+                 {% include youtubeplayer.html id=page.youtubeId %}
+                 {% endif %}
+                 {% if page.image.feature and page.image.feature != "" %}
+                 <img src="{{ page.image.feature }}" alt="{{ post.title }}" class="card-img-top">
+                 {% endif %}
+<div class="card-body">
 
-<a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook"><img src="/image/facebook.png" alt="facebook"></a>
-<a href="whatsapp://send?text={{ site.url}}{{ page.url }}" data-action="share/whatsapp/share"><img src="/image/whatsapp.png" alt="whatsapp"></a>
-  </div></div>
-
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-{% include  fb-comment.html %}
+    <h4 class="card-title" itemprop="name headline">{{ page.title }}</h4>
+<div class="byline"><span><i class="fa fa-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><i class="fas fa-pencil-alt" aria-hidden="true"></i> {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</span>
 </div>
+
+  </header>
+
+  <div class="post-content post-content1" itemprop="articleBody">
+    {{ content }}
+  </div>
+{% include fb-comment.html %}
+</div>
+
+    </div>
 </article>
+
+
+
+
+</div>

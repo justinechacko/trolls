@@ -1,16 +1,18 @@
 ---
-layout: default_bootstrap
+layout: default
 ---
+<div class="container">
 <article class="post">
-<div class="panel panel-default">
-  <div class="panel-heading text-center">
+<div class="card shadow-nohover">
+<div class="card-body">
   <header class="post-header">
-    <h4>{{ page.title | escape }}</h4>
+    <h1 class="post-title">{{ page.title }}</h1>
   </header>
-  </div>
-  <div class="post-content">
-  <div class="panel-body">
-    {{ content }}
-  </div></div></div>
 
+  <div class="post-content">
+    {{ content }}
+  </div>
+</div>
+</div>
 </article>
+</div>

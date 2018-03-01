@@ -1,2 +1,0 @@
-# trolls
-Malayalam trolls

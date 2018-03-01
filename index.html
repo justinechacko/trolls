@@ -1,11 +1,60 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: default
 ---
 
+<div class="home">
 
+  
+<div class="container">
+    <div class="row">
+  
 
+      <div class="card-columns">
+        {% for post in paginator.posts %}
+        
+          
 
+              <div class="card shadow-nohover">
+  	             
+                 {% if page.image.feature and page.image.feature != "" %}
+                 <img src="{{ page.image.feature }}" alt="{{ post.title }}" class="card-img-top">
+                 {% endif %}
+                 <div class="card-body">
 
+                   <h5 class="card-title"><a class="text-black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+<div class="byline"><span><i class="fa fa-calendar"></i> {{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span><span><i class="fas fa-pencil-alt" aria-hidden="true"></i> {{post.author}}</span></div>
+                   {{ post.excerpt }}
+                   <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-danger text-white" role="button">Read More</a>
+                 </div>
+                 
+               </div>
+
+          
+          
+            {% endfor %}
+          </div>
+        
+     </div></div>
+<nav aria-label="Page navigation">
+{% if paginator.total_pages > 1 %}
+  <ul class="pagination">
+{% if paginator.previous_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" tabindex="-1">&laquo; Previous</a>
+    </li>
+{% else %}
+<li class="page-item disabled">
+      <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" tabindex="-1">&laquo; Previous</a>
+    </li>
+{% endif %}
+
+   {% if paginator.next_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+  {% else %}
+    <li class="page-item disabled"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+  {% endif %}
+  </ul>
+{% endif %}
+</nav> 
+     
+    </div>

@@ -3,12 +3,11 @@ layout: page
 title: Search
 permalink: /search2/
 ---
-<form action="/search2/" method="get">
-  <label for="search-box">Search</label>
-  <input type="text" id="search-box" name="query">
-  <input type="submit" value="search">
-</form>
 
+<form class="form-inline my-2 my-lg-0" method="get" action="{{site.baseurl}}/search2/">
+          <input class="form-control mr-sm-2" id="search-box" type="search" placeholder="Search" aria-label="Search" name="query">
+          <button class="btn btn-danger my-2 my-sm-0" type="submit" value="search">Search</button>
+        </form>
 <ul id="search-results"></ul>
 
 <script>
@@ -25,5 +24,5 @@ permalink: /search2/
     {% endfor %}
   };
 </script>
-<script src="/js/lunr.min.js"></script>
-<script src="/js/search.js"></script>
+<script src="{{'/bs/assets/javascripts/lunr.min.js' | prepend: site.baseurl}}"></script>
+<script src="{{'/bs/assets/javascripts/search.js' | prepend: site.baseurl}}"></script>
