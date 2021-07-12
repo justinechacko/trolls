@@ -1,23 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    acme-client (0.6.2)
-      faraday (~> 0.9, >= 0.9.1)
-    activesupport (5.1.5)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
-    addressable (2.5.0)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
-    concurrent-ruby (1.0.5)
-    faraday (0.14.0)
-      multipart-post (>= 1.2, < 3)
     ffi (1.9.17)
     forwardable-extended (2.6.0)
-    i18n (0.9.5)
-      concurrent-ruby (~> 1.0)
     jekyll (3.4.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -29,9 +17,6 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-gitlab-letsencrypt (0.2.0)
-      acme-client (~> 0.6)
-      activesupport (>= 3.0.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -45,11 +30,9 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    minitest (5.11.3)
-    multipart-post (2.0.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    public_suffix (2.0.5)
+    public_suffix (4.0.6)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
@@ -60,16 +43,12 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    thread_safe (0.3.6)
-    tzinfo (1.2.5)
-      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   jekyll (= 3.4.0)
-  jekyll-gitlab-letsencrypt
   jekyll-paginate
   jekyll-sitemap
   tzinfo-data
